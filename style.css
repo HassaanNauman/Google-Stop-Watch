@@ -1,0 +1,184 @@
+:root {
+    --bg-color: #E5EDFF;
+    --bg-btn-hover: #B8D0FB;
+    --bg-btn: #c7dbff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main>.container {
+    background-color: var(--bg-color);
+    width: 400px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.watch-container {
+    flex: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch-container-wrapper {
+    position: relative;
+    border: 5px solid #c7dbff;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watch-container-wrapper.notStarted {
+    border: none;
+}
+
+.watch-header {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.watch-header-wrapper {
+    width: 95%;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.watch-header-wrapper>div {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.watch-header-wrapper>div>:is(p, a) {
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #000;
+}
+
+.watch-header-wrapper a {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.watch-activator-btn {
+    cursor: pointer;
+    padding: 7px 14px;
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+}
+
+.icon {
+    margin-right: 4px;
+}
+
+.watch-timer {
+    display: flex;
+    gap: 2px;
+}
+
+.watch-timer>input {
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 4px;
+    appearance: none;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.btns-container {
+    flex: 1.4;
+}
+
+.btns-container-wrapper {
+    width: 96%;
+    display: flex;
+    gap: 4px;
+    margin: 0 auto;
+}
+
+.btns-container-wrapper>button {
+    background-color: var(--bg-btn);
+    border: none;
+    flex: 1;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 35px;
+}
+
+.btns-container-wrapper>button:hover {
+    background-color: var(--bg-btn-hover);
+}
+
+.ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    rotate: 120deg;
+    background-color: purple;
+    width: 12px;
+    height: 12px;
+    border-radius: calc(12px / 2);
+}
+
+#reset {
+    display: block;
+}
+
+button.start {
+    background-color: #0B57D0;
+    color: #fff;
+}
+
+button.start:hover {
+    background-color: #0B57D0;
+}
+
+button.start+#reset {
+    display: none;
+}
+
+@media only screen and (max-width: 450px) {
+    .main>.container {
+        width: 90%;
+    }
+}
